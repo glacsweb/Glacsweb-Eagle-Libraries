@@ -1541,6 +1541,7 @@
 </devices>
 </deviceset>
 <deviceset name="BALUN">
+<description>Alternative item: http://uk.farnell.com/johanson-technology/2450bm15a0002e/balun-filter-2-45ghz/dp/1885515</description>
 <gates>
 <gate name="B$1" symbol="BALUN" x="0" y="2.54"/>
 </gates>
@@ -1555,7 +1556,10 @@
 <connect gate="B$1" pin="6" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PARTNUMBER" value="2341895" constant="no"/>
+<attribute name="URL" value="http://uk.farnell.com/johanson-technology/2450bm15a0015e/balun-imp-matched-2-4-2-5ghz-50ohm/dp/2341895" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>

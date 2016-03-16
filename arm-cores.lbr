@@ -440,6 +440,31 @@
 <smd name="PAD" x="0" y="0" dx="4.65" dy="4.65" layer="1"/>
 <text x="-4" y="5" size="1.016" layer="25">&gt;NAME</text>
 </package>
+<package name="XTAL-3.2X2.5">
+<description>http://www.farnell.com/datasheets/1883677.pdf</description>
+<smd name="1" x="-1.1" y="-0.85" dx="1.4" dy="1.2" layer="1"/>
+<smd name="2" x="1.1" y="-0.85" dx="1.4" dy="1.2" layer="1"/>
+<smd name="3" x="1.1" y="0.85" dx="1.4" dy="1.2" layer="1"/>
+<smd name="4" x="-1.1" y="0.85" dx="1.4" dy="1.2" layer="1"/>
+<circle x="-2.2216" y="-1.9066" radius="0.3306375" width="0" layer="21"/>
+<wire x1="-1.575" y1="1.65" x2="1.575" y2="1.65" width="0.2032" layer="21"/>
+<wire x1="2" y1="1.225" x2="2" y2="-1.225" width="0.2032" layer="21"/>
+<wire x1="1.575" y1="-1.65" x2="-1.575" y2="-1.65" width="0.2032" layer="21"/>
+<wire x1="-2" y1="-1.225" x2="-2" y2="1.225" width="0.2032" layer="21"/>
+<wire x1="-2" y1="1.225" x2="-1.575" y2="1.65" width="0.2032" layer="21" curve="89.516721"/>
+<wire x1="1.575" y1="1.65" x2="2" y2="1.225" width="0.2032" layer="21" curve="89.516721"/>
+<wire x1="2" y1="-1.225" x2="1.575" y2="-1.65" width="0.2032" layer="21" curve="89.516721"/>
+<wire x1="-1.575" y1="-1.65" x2="-2" y2="-1.225" width="0.2032" layer="21" curve="89.516721"/>
+<wire x1="0.3" y1="0" x2="1.2" y2="0" width="0.127" layer="21"/>
+<wire x1="1.2" y1="0" x2="1.2" y2="0.2" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="0.5" x2="-0.3" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="0" x2="-0.3" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.3" y1="0.5" x2="0.3" y2="0" width="0.127" layer="21"/>
+<wire x1="0.3" y1="0" x2="0.3" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="0" x2="-1.2" y2="0" width="0.127" layer="21"/>
+<wire x1="-1.2" y1="0" x2="-1.2" y2="-0.2" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.254" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="EFM32G880F128-QFP100">
@@ -612,6 +637,24 @@
 <pin name="USB_P" x="-33.02" y="12.7" length="middle"/>
 <pin name="XOSC32M_Q1" x="35.56" y="-5.08" length="middle" rot="R180"/>
 <pin name="XOSC32M_Q2" x="35.56" y="-2.54" length="middle" rot="R180"/>
+</symbol>
+<symbol name="CRYSTAL">
+<wire x1="0.508" y1="1.27" x2="2.032" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.032" y1="1.27" x2="2.032" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.032" y1="-1.27" x2="0.508" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.508" y1="-1.27" x2="0.508" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.524" x2="2.54" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="5.08" y2="2.54" width="0.127" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-2.54" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.127" layer="94"/>
+<pin name="4" x="2.54" y="-5.08" visible="off" length="short" direction="pwr" rot="R90"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="middle"/>
+<pin name="3" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
+<text x="-2.54" y="-3.048" size="1.27" layer="95" align="top-left">&gt;NAME</text>
+<text x="-2.54" y="3.048" size="1.27" layer="96">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pwr" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -801,6 +844,27 @@ Datasheet: http://www.farnell.com/datasheets/1701889.pdf</description>
 </connects>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ABM8G">
+<gates>
+<gate name="G$1" symbol="CRYSTAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-ABM8G" package="XTAL-3.2X2.5">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PARTNUM" value="2467852" constant="no"/>
+<attribute name="URL" value="http://uk.farnell.com/abracon/abm8g-32-000mhz-b4y-t/crystal-32mhz-10pf-3-2-x-2-5mm/dp/2467852" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
