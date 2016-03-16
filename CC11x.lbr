@@ -109,6 +109,8 @@
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="134" name="Port2" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="135" name="Port3" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="DrillLegend" color="7" fill="1" visible="no" active="no"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="14" fill="1" visible="no" active="no"/>
@@ -976,6 +978,11 @@
 <wire x1="-1.778" y1="-1.524" x2="-1.778" y2="1.524" width="0.127" layer="25"/>
 </package>
 <package name="SMA">
+<pad name="GND1" x="-2.54" y="2.54" drill="1.6" shape="octagon"/>
+<pad name="GND2" x="2.54" y="2.54" drill="1.6" shape="octagon"/>
+<pad name="GND3" x="2.54" y="-2.54" drill="1.6" shape="octagon"/>
+<pad name="GND4" x="-2.54" y="-2.54" drill="1.6" shape="octagon"/>
+<pad name="SIG" x="0" y="0" drill="1.5" shape="octagon"/>
 </package>
 <package name="JOHNSON_142-0701-806">
 <smd name="RF" x="0" y="-2.54" dx="5.08" dy="2.286" layer="1" rot="R90"/>
@@ -1473,6 +1480,18 @@
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
 <connect gate="G$1" pin="RF" pad="RF"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TH" package="SMA">
+<connects>
+<connect gate="G$1" pin="1" pad="GND1"/>
+<connect gate="G$1" pin="2" pad="GND2"/>
+<connect gate="G$1" pin="3" pad="GND3"/>
+<connect gate="G$1" pin="4" pad="GND4"/>
+<connect gate="G$1" pin="RF" pad="SIG"/>
 </connects>
 <technologies>
 <technology name=""/>
