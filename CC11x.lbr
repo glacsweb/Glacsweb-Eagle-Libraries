@@ -1105,6 +1105,25 @@
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
+<package name="0900PC15J0013">
+<smd name="1" x="0.75" y="0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="2" x="0.25" y="0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="3" x="-0.25" y="0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="4" x="-0.75" y="0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="5" x="-1.2" y="0" dx="0.8" dy="0.3" layer="1" rot="R180"/>
+<smd name="10" x="1.2" y="0" dx="0.8" dy="0.3" layer="1" rot="R180"/>
+<smd name="9" x="0.75" y="-0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="8" x="0.25" y="-0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="7" x="-0.25" y="-0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<smd name="6" x="-0.75" y="-0.8" dx="0.8" dy="0.3" layer="1" rot="R90"/>
+<rectangle x1="0.1" y1="-0.2" x2="0.8" y2="0.2" layer="51"/>
+<circle x="1.4" y="0.8" radius="0.1" width="0.2" layer="51"/>
+<wire x1="1.1" y1="0.7" x2="-1.1" y2="0.7" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="0.7" x2="-1.1" y2="-0.7" width="0.127" layer="51"/>
+<wire x1="-1.1" y1="-0.7" x2="1.1" y2="-0.7" width="0.127" layer="51"/>
+<wire x1="1.1" y1="-0.7" x2="1.1" y2="0.7" width="0.127" layer="51"/>
+<text x="-1.7" y="1.5" size="0.8128" layer="25">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CC1180_RSP_36">
@@ -1369,6 +1388,19 @@
 <wire x1="17.78" y1="-17.78" x2="17.78" y2="22.86" width="0.254" layer="94"/>
 <wire x1="17.78" y1="22.86" x2="-17.78" y2="22.86" width="0.254" layer="94"/>
 <text x="-17.78" y="25.4" size="2.54" layer="125">&gt;NAME</text>
+</symbol>
+<symbol name="0900PC15J0013">
+<pin name="LNA_N" x="-17.78" y="7.62" length="middle" direction="out"/>
+<pin name="LNA_P" x="-17.78" y="2.54" length="middle" direction="out"/>
+<pin name="TRX" x="-17.78" y="-2.54" length="middle" direction="in"/>
+<pin name="PA" x="-17.78" y="-7.62" length="middle" direction="in"/>
+<pin name="GND" x="0" y="-15.24" length="middle" direction="pwr" rot="R90"/>
+<pin name="ANT" x="15.24" y="0" length="middle" direction="out" rot="R180"/>
+<wire x1="-12.7" y1="10.16" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<text x="-12.7" y="12.7" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1725,6 +1757,31 @@
 <connect gate="U$1" pin="VDD" pad="6"/>
 <connect gate="U$1" pin="VIO" pad="5"/>
 <connect gate="U$1" pin="VREGIN" pad="7"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="0900PC15J0013">
+<description>CC1120 one-piece output filter.
+
+http://onecall.farnell.com/johanson-technology/0900pc15j0013e/balun-imp-matched-868-928mhz-chip/dp/2341894
+
+http://www.johansontechnology.com/datasheets/highly-integrated-passive-components/0900PC15J0013.pdf</description>
+<gates>
+<gate name="G$1" symbol="0900PC15J0013" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="0900PC15J0013">
+<connects>
+<connect gate="G$1" pin="ANT" pad="7"/>
+<connect gate="G$1" pin="GND" pad="5 6 8 9 10"/>
+<connect gate="G$1" pin="LNA_N" pad="1"/>
+<connect gate="G$1" pin="LNA_P" pad="2"/>
+<connect gate="G$1" pin="PA" pad="4"/>
+<connect gate="G$1" pin="TRX" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
