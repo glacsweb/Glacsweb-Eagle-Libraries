@@ -1658,13 +1658,13 @@
 <technology name=""/>
 </technologies>
 </device>
-<device name="0603S" package="C0603">
+<device name="S" package="C0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="C0603"/>
 </technologies>
 </device>
 </devices>
