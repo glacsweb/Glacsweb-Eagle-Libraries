@@ -1649,7 +1649,16 @@
 <gate name="G$1" symbol="C_EU" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="C0402_SMALL">
+<device name="0402S" package="C0402_SMALL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0603S" package="C0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
