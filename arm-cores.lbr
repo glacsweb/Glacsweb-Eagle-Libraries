@@ -464,6 +464,23 @@
 <wire x1="-0.3" y1="0" x2="-1.2" y2="0" width="0.127" layer="21"/>
 <wire x1="-1.2" y1="0" x2="-1.2" y2="-0.2" width="0.127" layer="21"/>
 <wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.254" layer="21"/>
+<text x="-1.778" y="2.032" size="0.8128" layer="25">&gt;NAME</text>
+</package>
+<package name="XTAL-3.2X1.5">
+<smd name="1" x="-1.2446" y="0" dx="1.905" dy="1.0922" layer="1" rot="R90"/>
+<smd name="2" x="1.2446" y="0" dx="1.905" dy="1.0922" layer="1" rot="R90"/>
+<wire x1="-2.032" y1="0.762" x2="2.032" y2="0.762" width="0.127" layer="21"/>
+<wire x1="2.032" y1="0.762" x2="2.032" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="2.032" y1="-0.762" x2="-2.032" y2="-0.762" width="0.127" layer="21"/>
+<wire x1="-2.032" y1="-0.762" x2="-2.032" y2="0.762" width="0.127" layer="21"/>
+<wire x1="0.3" y1="0" x2="0.692" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="0.5" x2="-0.3" y2="0" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="0" x2="-0.3" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="0.3" y1="0.5" x2="0.3" y2="0" width="0.127" layer="21"/>
+<wire x1="0.3" y1="0" x2="0.3" y2="-0.5" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="0" x2="-0.692" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="-0.254" x2="0" y2="0.254" width="0.254" layer="21"/>
+<text x="-1.778" y="1.016" size="0.8128" layer="25">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -655,6 +672,22 @@
 <text x="-2.54" y="-3.048" size="1.27" layer="95" align="top-left">&gt;NAME</text>
 <text x="-2.54" y="3.048" size="1.27" layer="96">&gt;VALUE</text>
 <pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pwr" rot="R90"/>
+</symbol>
+<symbol name="CRYSTAL-2PIN">
+<wire x1="0.508" y1="1.27" x2="2.032" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.032" y1="1.27" x2="2.032" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.032" y1="-1.27" x2="0.508" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.508" y1="-1.27" x2="0.508" y2="1.27" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.524" x2="2.54" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="5.08" y2="2.54" width="0.127" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-2.54" y2="-2.54" width="0.127" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="2.54" width="0.127" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="middle"/>
+<pin name="3" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
+<text x="-2.54" y="-3.048" size="1.27" layer="95" align="top-left">&gt;NAME</text>
+<text x="-2.54" y="3.048" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -865,6 +898,23 @@ Datasheet: http://www.farnell.com/datasheets/1701889.pdf</description>
 <attribute name="PARTNUM" value="2467852" constant="no"/>
 <attribute name="URL" value="http://uk.farnell.com/abracon/abm8g-32-000mhz-b4y-t/crystal-32mhz-10pf-3-2-x-2-5mm/dp/2467852" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ABS07">
+<description>32 KHz: http://onecall.farnell.com/abracon/abs07-32-768khz-t/crystal-32-768khz-12-5pf-smd/dp/2101347</description>
+<gates>
+<gate name="A" symbol="CRYSTAL-2PIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="XTAL-3.2X1.5">
+<connects>
+<connect gate="A" pin="1" pad="1"/>
+<connect gate="A" pin="3" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

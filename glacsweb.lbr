@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -10223,7 +10223,6 @@ Source: http://www.kingbright.com/manager/upload/pdf/KA-3528ASYC(Ver1189474662.1
 <wire x1="-3.8" y1="1.3" x2="-1.92" y2="1.3" width="0.127" layer="21"/>
 <wire x1="-1.92" y1="1.3" x2="-0.5" y2="1.3" width="0.127" layer="21"/>
 <wire x1="-0.5" y1="1.3" x2="-0.1" y2="0.1" width="0.127" layer="21"/>
-<wire x1="-3.8" y1="-0.4" x2="10.39" y2="-0.4" width="0.127" layer="20" style="shortdash"/>
 <wire x1="-1.92" y1="1.3" x2="-1.92" y2="3.4" width="0.127" layer="21" style="shortdash"/>
 <wire x1="-1.92" y1="3.4" x2="-1.6" y2="3.7" width="0.127" layer="21" style="shortdash" curve="-90"/>
 <wire x1="-1.6" y1="3.7" x2="8.8" y2="3.7" width="0.127" layer="21" style="shortdash"/>
