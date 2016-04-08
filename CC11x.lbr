@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -1173,24 +1173,9 @@
 <wire x1="0.635" y1="-2.3368" x2="0.635" y2="-1.8542" width="0.1524" layer="21"/>
 <wire x1="0.635" y1="1.0668" x2="-5.715" y2="1.0668" width="0.1524" layer="21"/>
 <wire x1="-5.715" y1="1.0668" x2="-5.715" y2="0.5842" width="0.1524" layer="21"/>
-<wire x1="-4.5974" y1="-3.4036" x2="-5.3594" y2="-3.4036" width="0.508" layer="21" curve="-180"/>
-<wire x1="-5.3594" y1="-3.4036" x2="-4.5974" y2="-3.4036" width="0.508" layer="21" curve="-180"/>
-<text x="-7.9756" y="-1.8288" size="1.27" layer="21" ratio="6" rot="SR0">1</text>
-<text x="-7.9756" y="-0.5588" size="1.27" layer="21" ratio="6" rot="SR0">2</text>
-<text x="1.9558" y="-1.8796" size="1.27" layer="21" ratio="6" rot="SR0">9</text>
-<text x="1.3716" y="-0.6096" size="1.27" layer="21" ratio="6" rot="SR0">10</text>
-<wire x1="-5.715" y1="-2.3368" x2="0.635" y2="-2.3368" width="0.1524" layer="51"/>
-<wire x1="0.635" y1="-2.3368" x2="0.635" y2="1.0668" width="0.1524" layer="51"/>
-<wire x1="0.635" y1="1.0668" x2="-5.715" y2="1.0668" width="0.1524" layer="51"/>
-<wire x1="-5.715" y1="1.0668" x2="-5.715" y2="-2.3368" width="0.1524" layer="51"/>
-<wire x1="-4.5974" y1="-3.4036" x2="-5.3594" y2="-3.4036" width="0.508" layer="51" curve="-180"/>
-<wire x1="-5.3594" y1="-3.4036" x2="-4.5974" y2="-3.4036" width="0.508" layer="51" curve="-180"/>
-<text x="-7.9756" y="-1.8288" size="1.27" layer="51" ratio="6" rot="SR0">1</text>
-<text x="-7.9756" y="-0.5588" size="1.27" layer="51" ratio="6" rot="SR0">2</text>
-<text x="1.9558" y="-1.8796" size="1.27" layer="51" ratio="6" rot="SR0">9</text>
-<text x="1.3716" y="-0.6096" size="1.27" layer="51" ratio="6" rot="SR0">10</text>
 <text x="-7.2644" y="1.8542" size="2.0828" layer="25" ratio="10" rot="SR0">&gt;NAME</text>
 <text x="-8.0264" y="-5.3848" size="2.0828" layer="27" ratio="10" rot="SR0">&gt;VALUE</text>
+<circle x="-5.08" y="-2.54" radius="0.127" width="0.3048" layer="21"/>
 </package>
 <package name="UFL-HIROSE">
 <smd name="1" x="-1.475" y="0" dx="2.2" dy="1.05" layer="1" rot="R90"/>
