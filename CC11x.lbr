@@ -3214,6 +3214,7 @@ http://onecall.farnell.com/c-k-components/kms221g-lfs/switch-spst-0-05a-32vdc-sm
 </devices>
 </deviceset>
 <deviceset name="JST-S06B-PASK-2" prefix="H">
+<description>http://uk.farnell.com/jst-japan-solderless-terminals/s06b-pask-2/header-pa-6way-side-2mm/dp/1830751</description>
 <gates>
 <gate name="A" symbol="PINHD6" x="2.54" y="-2.54"/>
 </gates>
@@ -3228,7 +3229,10 @@ http://onecall.farnell.com/c-k-components/kms221g-lfs/switch-spst-0-05a-32vdc-sm
 <connect gate="A" pin="6" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="MPN_ONECALL" value="1830751
+" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
