@@ -3424,8 +3424,7 @@ http://onecall.farnell.com/c-k-components/kms221g-lfs/switch-spst-0-05a-32vdc-sm
 </devices>
 </deviceset>
 <deviceset name="MOLEX-67068-9000" prefix="X">
-<description>&lt;b&gt;USB B-type Receptacle&lt;/b&gt; Vertical, 4 Position, Through Hole&lt;p&gt;
-Source: Sibalco Kycon KUSBVX-BS1N-xxx.pdf</description>
+<description>http://onecall.farnell.com/molex/67068-9000/usb-2-0-type-b-receptacle-th/dp/1463094</description>
 <gates>
 <gate name="G$1" symbol="USB" x="0" y="0"/>
 </gates>
@@ -3440,7 +3439,9 @@ Source: Sibalco Kycon KUSBVX-BS1N-xxx.pdf</description>
 <connect gate="G$1" pin="S2" pad="6"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="ONECALL" value="1463094" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
