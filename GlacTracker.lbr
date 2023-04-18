@@ -1188,6 +1188,38 @@
 <circle x="57.5056" y="2.4892" radius="2.159" width="0.127" layer="48"/>
 <circle x="2.4892" y="2.5146" radius="2.159" width="0.127" layer="48"/>
 </package>
+<package name="ADAFRUIT-XTSD">
+<wire x1="0" y1="2.54" x2="0" y2="15.24" width="0.127" layer="21"/>
+<wire x1="0" y1="15.24" x2="2.54" y2="17.78" width="0.127" layer="21" curve="-90"/>
+<wire x1="2.54" y1="17.78" x2="19.05" y2="17.78" width="0.127" layer="21"/>
+<wire x1="19.05" y1="17.78" x2="21.59" y2="15.24" width="0.127" layer="21" curve="-90"/>
+<wire x1="21.59" y1="15.24" x2="21.59" y2="2.54" width="0.127" layer="21"/>
+<wire x1="21.59" y1="2.54" x2="19.05" y2="0" width="0.127" layer="21" curve="-90"/>
+<wire x1="19.05" y1="0" x2="2.54" y2="0" width="0.127" layer="21"/>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.127" layer="21" curve="-90"/>
+<text x="10.795" y="7.62" size="1.651" layer="51" font="vector" ratio="15" align="center">SPI SMT
+SD Card</text>
+<attribute name="BOM" value="EXCLUDE" x="2.54" y="15.24" size="1.778" layer="27" display="off"/>
+<attribute name="BOM" value="EXCLUDE" x="19.05" y="15.24" size="1.778" layer="27" display="off"/>
+<pad name="VIN" x="3.175" y="2.54" drill="1.0033" diameter="1.778"/>
+<pad name="3V3" x="5.715" y="2.54" drill="1.0033" diameter="1.778"/>
+<pad name="GND" x="8.255" y="2.54" drill="1.0033" diameter="1.778" shape="square"/>
+<pad name="SCK" x="10.795" y="2.54" drill="1.0033" diameter="1.778"/>
+<pad name="MISO" x="13.335" y="2.54" drill="1.0033" diameter="1.778"/>
+<pad name="MOSI" x="15.875" y="2.54" drill="1.0033" diameter="1.778"/>
+<pad name="CS" x="18.415" y="2.54" drill="1.0033" diameter="1.778"/>
+<pad name="P$8" x="2.54" y="15.24" drill="2.4892"/>
+<pad name="P$9" x="19.05" y="15.24" drill="2.4892"/>
+<text x="3.175" y="4.191" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">VIN</text>
+<text x="5.715" y="0.889" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">3V3</text>
+<text x="8.255" y="4.191" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">GND</text>
+<text x="10.795" y="0.889" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">SCK</text>
+<text x="15.748" y="0.889" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">MOSI</text>
+<text x="18.415" y="4.191" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">CS</text>
+<text x="13.335" y="4.191" size="1.016" layer="21" font="vector" ratio="15" rot="R180" align="center">MISO</text>
+<text x="10.795" y="15.24" size="1.27" layer="25" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="10.795" y="12.7" size="1.27" layer="27" ratio="10" align="bottom-center">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="LTC3130">
@@ -1453,6 +1485,21 @@
 <wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 <text x="-7.62" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="ADAFRUIT-XTSD">
+<pin name="GND" x="-2.54" y="2.54" length="middle"/>
+<pin name="3.3V" x="-2.54" y="12.7" length="middle"/>
+<pin name="VIN" x="-2.54" y="17.78" length="middle"/>
+<pin name="MOSI" x="25.4" y="12.7" length="middle" rot="R180"/>
+<pin name="MISO" x="25.4" y="17.78" length="middle" rot="R180"/>
+<pin name="SCK" x="25.4" y="7.62" length="middle" rot="R180"/>
+<pin name="CS" x="25.4" y="2.54" length="middle" rot="R180"/>
+<wire x1="2.54" y1="20.32" x2="20.32" y2="20.32" width="0.254" layer="94"/>
+<wire x1="20.32" y1="20.32" x2="20.32" y2="0" width="0.254" layer="94"/>
+<wire x1="20.32" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="2.54" y2="20.32" width="0.254" layer="94"/>
+<text x="11.43" y="21.59" size="2.032" layer="95" align="bottom-center">&gt;NAME</text>
+<text x="11.43" y="-2.54" size="2.032" layer="96" align="bottom-center">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1814,7 +1861,34 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="ADAFRUIT-XTSD">
+<gates>
+<gate name="G$1" symbol="ADAFRUIT-XTSD" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="ADAFRUIT-XTSD">
+<connects>
+<connect gate="G$1" pin="3.3V" pad="3V3"/>
+<connect gate="G$1" pin="CS" pad="CS"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="MISO" pad="MISO"/>
+<connect gate="G$1" pin="MOSI" pad="MOSI"/>
+<connect gate="G$1" pin="SCK" pad="SCK"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
